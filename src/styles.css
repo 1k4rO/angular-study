@@ -1,14 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
-  font-family: 'Roboto', Arial, sans-serif;
   color: #616161;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
 }
 
 div  {
   padding: 0 16px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 120px;
 }
 
 h1 {
@@ -44,15 +57,11 @@ li {
   font-weight: normal;
 }
 
-.copyright {
-  background-color: lightgray;
-  padding: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .valid {
   border-bottom: solid green;
 }
+
+
 
 .invalid {
   border-bottom: solid red;

@@ -1,0 +1,8 @@
+.body-text{
+  display:flex
+
+}
+
+.product-list{
+  flex: 0 0 auto;
+}

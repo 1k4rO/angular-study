@@ -1,9 +1,24 @@
+<div class="body-text">
+  <div class="product-list">
 <h2>Product List</h2>
 
 <ul>
-  <li (click)="selectedProduct = 'Webcam'">Webcam</li>
-  <li (click)="selectedProduct = 'Microphone'">Microphone</li>
-  <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
+  <li *ngFor="let product of products" (click)="selectedProduct = product">
+    {{product.name }}
+    <span>{{product.price | currency:'USD'}}</span>
+  </li>
 </ul>
+</div>
+<div class="detail-product">
+<app-product-detail
+  *ngIf="selectedProduct; else noProduct"
+  [product]="selectedProduct"
+  (bought)="onBuy()"
+  ></app-product-detail>
 
-<app-product-detail [name]="selectedProduct"></app-product-detail>
+<ng-template #noProduct>
+  <p>No product selected!</p>
+</ng-template>
+</div>
+
+</div>
